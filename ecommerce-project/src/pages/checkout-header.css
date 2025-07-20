@@ -12,6 +12,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
+  border: 1px black;
 }
 
 .checkout-header .header-content {
@@ -26,9 +27,17 @@
   width: 200px;
 }
 
+.checkout-header-left-section
+{
+  border: solid 1px black;
+  margin-top: 10px;
+  border-radius: 14px;
+  padding:2px;
+}
 .checkout-header .logo {
-  height: 26px;
-  margin-top: 0px;
+  
+  width:100%;
+  margin-top: 0 px;
 }
 
 .checkout-header .mobile-logo {
