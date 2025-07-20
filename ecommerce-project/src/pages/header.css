@@ -12,7 +12,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: 80px;
 }
 
 .header .left-section {
@@ -39,8 +39,15 @@
 }
 
 .header .logo {
-  height: 26px;
-  margin-top: 1px;
+  /* height: 60px;
+  /* margin-top: 1px; */
+  /* width:100%; */ 
+  max-height: 100px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  margin-top:15px;
+  
 }
 
 .header .mobile-logo {
@@ -54,8 +61,12 @@
 
   .header .mobile-logo {
     display: block;
-    height: 26px;
-    margin-top: 1px;
+    /* height: 26px;
+    margin-top: 1px; */
+  max-height: 60px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
   }
 }
 
@@ -81,7 +92,7 @@
 }
 
 .header .search-button {
-  background-color: rgb(186, 255, 190);
+  background-color: rgb(0, 0, 0);
   border: none;
   width: 45px;
   height: 40px;
@@ -91,9 +102,10 @@
 }
 
 .header .search-icon {
-  height: 20px;
+  height: 40px;
   margin-left: 0px;
-  margin-top: 3px;
+  margin-top: 0px;
+  width:40px;
 }
 
 .header .right-section {
@@ -136,7 +148,7 @@
 }
 
 .header .cart-quantity {
-  color: rgb(8, 79, 45);
+  color: rgb(0, 2, 1);
   font-size: 14px;
   font-weight: 700;
 
