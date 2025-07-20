@@ -1,16 +1,19 @@
 :root {
-  --ff-heading: 'Montserrat', sans-serif;
+  --ff-light: 'Raleway', sans-serif;
   --ff-body: 'Roboto', sans-serif;
+}
+
+.light-text {
+  font-family: var(--ff-light);
+  font-weight: 300;
 }
 
 body {
   font-family: var(--ff-body);
-  font-weight: 100;
-  
+  font-weight: 300;
+  line-height: 1.3;
 }
-
 body {
-  
   color: rgb(33, 33, 33);
   /* The <body> element has a default margin of 8px
      on all sides. This removes the default margins. */
@@ -37,7 +40,7 @@ input, select, button {
 
 .button-primary {
   color: rgb(255, 255, 255);
-  background-color: rgb(25, 135, 84);
+  background-color: rgb(0, 0, 0);
   border: 1px solid transparent;
   border-radius: 5px;
   cursor: pointer;
@@ -45,27 +48,29 @@ input, select, button {
 }
 
 .button-primary:hover {
-  background-color: rgba(25, 135, 84, 0.75);
+  background-color: rgba(78, 82, 80, 0.75);
   border: 1px solid transparent;
 }
 
 .button-primary:active {
-  background: rgba(25, 135, 84, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   border-color: transparent;
   box-shadow: none;
 }
 
 .button-secondary {
   color: rgb(33, 33, 33);
-  background: white;
-  border: 1px solid rgb(200, 200, 200);
-  border-radius: 5px;
+  background:  rgb(239, 238, 238);
+  border: 1px solid rgb(105, 104, 104);
+  border-radius: 55px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(220, 220, 220, 0.2);
+
 }
 
 .button-secondary:hover {
   background-color: rgb(250, 250, 250);
+  
 }
 
 .button-secondary:active {
@@ -86,7 +91,7 @@ input, select, button {
 }
 
 .link-primary {
-  color: rgb(25, 135, 84);
+  color: rgb(0, 0, 0);
   cursor: pointer;
 }
 
@@ -112,5 +117,5 @@ select {
 
 select:focus,
 input:focus {
-  outline: 2px solid rgb(25, 135, 84);
+  outline: 2px solid rgb(0, 0, 0);
 }
