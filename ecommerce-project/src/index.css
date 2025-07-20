@@ -1,5 +1,16 @@
+:root {
+  --ff-heading: 'Montserrat', sans-serif;
+  --ff-body: 'Roboto', sans-serif;
+}
+
 body {
-   font-family: 'Inter', sans-serif;
+  font-family: var(--ff-body);
+  font-weight: 100;
+  
+}
+
+body {
+  
   color: rgb(33, 33, 33);
   /* The <body> element has a default margin of 8px
      on all sides. This removes the default margins. */
