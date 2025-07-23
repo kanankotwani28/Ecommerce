@@ -3,7 +3,7 @@ import { useEffect,useState } from 'react';
 import { Header } from "../assets/Header";
 // import { products } from "../../starting-code/data/products.js";
 import "./HomePage.css";
-export function HomePage() {
+export function HomePage({cart}) {
 
   // fetch('http://localhost:3000/api/products').then((response)=>{
   //   // console.log(response)
@@ -20,7 +20,6 @@ export function HomePage() {
   // });
 
   const [products,setProducts]=useState([]);
-  const [cart,setCart]=useState([]);
 
   useEffect(()=>{
     axios.get('http://localhost:3000/api/products')
@@ -30,11 +29,11 @@ export function HomePage() {
       });
  
   //Generate the Cart Quantity
-  axios.get('http://localhost:3000/api/cart-items')
-    .then((response)=>{
-        setCart(response.data)
-    }); 
-    
+  // axios.get('http://localhost:3000/api/cart-items')
+  //   .then((response)=>{
+  //       setCart(response.data)
+  //   }); 
+
  },[]); 
 
   return (
