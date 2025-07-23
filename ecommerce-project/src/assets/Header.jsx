@@ -2,6 +2,12 @@ import {Link} from 'react-router-dom';
 import './Header.css'
 export function Header({cart})
 {
+
+    if (!Array.isArray(cart)) {
+    console.warn("Header expected cart to be an array:", cart);
+    cart = [];
+    }
+    
     let totalQuantity=0;
     cart.forEach((cartItem) =>{
         totalQuantity+=cartItem.quantity;

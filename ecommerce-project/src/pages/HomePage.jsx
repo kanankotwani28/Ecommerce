@@ -34,7 +34,9 @@ export function HomePage() {
     .then((response)=>{
         setCart(response.data)
     }); 
+    
  },[]); 
+
   return (
     <>
       <title>Ecommerce Project</title>
