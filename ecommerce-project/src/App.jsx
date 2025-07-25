@@ -1,5 +1,5 @@
 import { HomePage } from './pages/HomePage'
-import { Routes , Route, BrowserRouter} from 'react-router-dom'
+import { Routes , Route} from 'react-router-dom'
 import {useEffect,useState} from 'react';
 import { CheckoutPage } from './pages/CheckoutPage'
 import { OrdersPage } from './pages/OrdersPage'
@@ -16,14 +16,14 @@ function App() {
     }); 
   },[]);
   return (
-    <BrowserRouter>
+    
     <Routes>
       <Route path="/" element={<HomePage cart={cart} />} />
       <Route path="checkout" element={<CheckoutPage cart={cart} />} />
       <Route path="orders" element={<OrdersPage />}/>
       <Route path="tracking" element={<TrackingPage />} />
     </Routes>
-    </BrowserRouter>
+    
   );
 }
 export default App
