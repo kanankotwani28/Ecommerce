@@ -4,7 +4,7 @@ import { Header } from "../../assets/Header";
 import { ProductsGrid } from "./ProductsGrid";
 // import { products } from "../../starting-code/data/products.js";
 import "./HomePage.css";
-export function HomePage({ cart }) {
+export function HomePage({ cart,loadCart }) {
   // fetch('http://localhost:3000/api/products').then((response)=>{
   //   // console.log(response)
   //   response.json().then((data)=>{
@@ -21,7 +21,7 @@ export function HomePage({ cart }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    
+
     const getHomeData = async() => {
     const response = await axios.get("/api/products")
       // console.log(response.data);
@@ -41,7 +41,7 @@ export function HomePage({ cart }) {
       <title>Ecommerce Project</title>
       <Header cart={cart} />
       <div className="home-page">
-        <ProductsGrid products={products}/>
+        <ProductsGrid products={products} loadCart={loadCart}/>
       </div>
     </>
   );
