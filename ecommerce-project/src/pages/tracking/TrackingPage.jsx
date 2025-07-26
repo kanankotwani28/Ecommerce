@@ -1,9 +1,18 @@
 import './TrackingPage.css'
 // import { Header } from '../assets/Header';
 import {Header} from "../../assets/Header.jsx";
+import { useLocation, } from "react-router-dom";
+import dayjs from 'dayjs';
 
 export function TrackingPage()
 {
+  const location = useLocation();
+  
+
+    const { product, estimatedDeliveryTimeMs, quantity} =
+    location.state || {};
+
+    
     return(
         <>
             <Header />
@@ -14,17 +23,17 @@ export function TrackingPage()
                 View all orders
                 </a>
 
-                <div className="delivery-date">Arriving on Monday, June 13</div>
+                <div className="delivery-date">Arriving on  {dayjs(estimatedDeliveryTimeMs).format("MMMM D")}</div>
 
                 <div className="product-info">
-                Black and Gray Athletic Cotton Socks - 6 Pairs
+                {product.name}
                 </div>
 
-                <div className="product-info">Quantity: 1</div>
+                <div className="product-info">Quantity:{quantity}</div>
 
                 <img
                 className="product-image"
-                src="images/products/athletic-cotton-socks-6-pairs.jpg"
+                src={product.image}
                 />
 
                 <div className="progress-labels-container">
