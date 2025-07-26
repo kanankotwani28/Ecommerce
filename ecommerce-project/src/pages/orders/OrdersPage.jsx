@@ -45,7 +45,7 @@ export function OrdersPage({ cart }) {
                   return (
                     <Fragment key={orderProduct.product.id}>
                       <div className="product-image-container">
-                        <img src="images/products/athletic-cotton-socks-6-pairs.jpg" />
+                        <img src={orderProduct.product.image} />
                       </div>
 
                       <div className="product-details">

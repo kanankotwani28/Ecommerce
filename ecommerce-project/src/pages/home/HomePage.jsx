@@ -38,7 +38,6 @@ export function HomePage({ cart,loadCart }) {
 
   return (
     <>
-      <title>Ecommerce Project</title>
       <Header cart={cart} />
       <div className="home-page">
         <ProductsGrid products={products} loadCart={loadCart}/>

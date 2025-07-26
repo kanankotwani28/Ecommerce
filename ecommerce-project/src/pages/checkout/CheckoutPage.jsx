@@ -64,7 +64,6 @@ export function CheckoutPage({ cart , loadCart}) {
 
   return (
     <>
-      <title>Checkout</title>
       <CheckoutHeader cart={cart}/>
       <div className="checkout-page">
         <div className="page-title">Review your order</div>
@@ -72,7 +71,7 @@ export function CheckoutPage({ cart , loadCart}) {
         <div className="checkout-grid">
           <OrderSummary cart={cart} deliveryOptions={deliveryOptions} selectedOptions={selectedOptions} handleDeliveryChange={handleDeliveryChange} loadCart={loadCart}/>
 
-          <PaymentSummary cart={cart} paymentSummary={paymentSummary}/>
+          <PaymentSummary cart={cart} paymentSummary={paymentSummary} loadCart={loadCart} />
         </div>
       </div>
     </>
