@@ -62,6 +62,10 @@
     align-items: start;
     line-height: 23px;
     padding: 15px;
+    
+  }
+  .order-header{
+    box-shadow: 2px 2px 5px #51504E;
   }
 
   .orders-page .order-header-left-section {
@@ -97,6 +101,7 @@
   column-gap: 35px;
   row-gap: 60px;
   align-items: center;
+  box-shadow: 2px 2px 5px #51504E;
 }
 
 @media (max-width: 800px) {

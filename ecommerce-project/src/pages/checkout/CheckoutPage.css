@@ -48,6 +48,13 @@
   border: 1px solid rgb(105, 104, 104);
   border-radius: 40px;
   padding: 18px;
+  
+}
+.payment-summary{
+   box-shadow: 2px 2px 5px #51504E;
+}
+.cart-item-container{
+   box-shadow: 2px 2px 5px #51504E;
 }
 
 .checkout-page .cart-item-container {
@@ -117,8 +124,22 @@
   margin-bottom: 5px;
 }
 
-.checkout-page .product-quantity .link-primary {
+.checkout-page .product-quantity {
   margin-left: 3px;
+
+}
+.delete-quantity-link{
+  margin:17px;
+  border:1px,solid,black;
+  padding-right:10px;
+  padding-left:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+  border-radius:55px;
+}
+
+.product-link{
+  color:#51504E
 }
 
 @media (max-width: 1000px) {
@@ -210,4 +231,9 @@
 
   margin-top: 20px;
   margin-bottom: 19px;
+}
+
+.update-summary{
+  margin: 7px;  
+  
 }

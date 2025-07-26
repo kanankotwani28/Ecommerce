@@ -9,9 +9,16 @@ import { PaymentSummary } from "./PaymentSummary";
 
 export function CheckoutPage({ cart , loadCart}) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
-  const [selectedOptions, setSelectedOptions] = useState({});
+  const [selectedOptions, setSelectedOptions] = useState(() =>{
+     const stored = window.localStorage.getItem('selectedDelivery');
+     return stored ? JSON.parse(stored) : {};
+  }
+  );
   const [paymentSummary, setPaymentSummary] = useState(null);
 
+  useEffect(() => {
+  window.localStorage.setItem('selectedDelivery', JSON.stringify(selectedOptions));
+}, [selectedOptions]);
   useEffect(() => {
     axios
       .get("/api/delivery-options?expand=estimatedDeliveryTime")
@@ -43,8 +50,9 @@ export function CheckoutPage({ cart , loadCart}) {
   }
   if (Object.keys(selectedOptions).length > 0) {
     applySelection();
+    loadCart();
   }
-}, [selectedOptions]);
+}, [selectedOptions,loadCart]);
 
 
   const handleDeliveryChange = (productId, optionId) => {

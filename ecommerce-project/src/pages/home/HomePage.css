@@ -64,6 +64,9 @@
     grid-template-columns: 1fr;
   }
 }
+.products-grid{
+  box-shadow: 2px 2px 5px #51504E;
+}
 
 .home-page .product-container {
   padding-top: 40px;
@@ -76,6 +79,8 @@
 
   display: flex;
   flex-direction: column;
+  box-shadow: 2px 2px 5px #51504E;
+  margin:2px;
 }
 
 .home-page .product-image-container {
