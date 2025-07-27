@@ -32,5 +32,7 @@
 
 ```bash
 git clone https://github.com/kanankotwani28/Ecommerce.git
-cd eclipse
+cd ecommerce-project
+cd ecommerce-backend
 npm install
+npm run dev
