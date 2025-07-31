@@ -31,6 +31,8 @@
 ## 🔧 Setup & Installation
 
 ```bash
-git clone https://github.com/your-username/eclipse.git
-cd eclipse
+git clone https://github.com/kanankotwani28/Ecommerce.git
+cd ecommerce-project
+cd ecommerce-backend
 npm install
+npm run dev
