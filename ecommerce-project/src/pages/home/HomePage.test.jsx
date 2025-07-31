@@ -37,13 +37,13 @@ describe('HomePage Component',()=>{
                     priceCents: 2095,
                     keywords: ["sports", "basketballs"]
                 }
-                    ]}}
+                ]}}
         });
     })
     it('displays the producrs correct',async()=>{
         render(
         <MemoryRouter>
-        <HomePage cart={[]} loadCart={loadCart} />
+          <HomePage cart={[]} loadCart={loadCart} />
         </MemoryRouter>);
         const productContainer = await screen.findAllByTestId('product-container');
 
