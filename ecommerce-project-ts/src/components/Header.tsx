@@ -1,8 +1,15 @@
 import {Link} from 'react-router';
-import './Header.css'
-export function Header({cart})
-{
+import './Header.css';
 
+type HeaderProps = {
+    cart : {
+        productId:string;
+        quantity: number;
+        deliveryOptionId: string;
+    }[];
+};
+export function Header({cart} : HeaderProps)
+{
     if (!Array.isArray(cart)) {
     console.warn("Header expected cart to be an array:", cart);
     cart = [];
@@ -11,7 +18,7 @@ export function Header({cart})
     let totalQuantity=0;
     cart.forEach((cartItem) =>{
         totalQuantity+=cartItem.quantity;
-        console.log(cartItem.qunatity)
+        console.log(cartItem.quantity)
     });
     return(
         <>
